@@ -47,8 +47,7 @@ class _JuegoViewState extends State<JuegoView> {
                 onPressed: () {
                   setState(() {
                     helperJugador = 0;
-                    //helperTiro = tiroIA.nextInt(3);
-                    helperTiro = 1;
+                    helperTiro = tiroIA.nextInt(3);
 
                     if (helperTiro == 0) {
                       //No pasa nada
@@ -77,6 +76,8 @@ class _JuegoViewState extends State<JuegoView> {
                           ],
                         ),
                       );
+                      puntosIA = 0;
+                      puntosJugador = 0;
                     }
 
                     if (puntosJugador == 10) {
@@ -112,8 +113,7 @@ class _JuegoViewState extends State<JuegoView> {
                 onPressed: () {
                   setState(() {
                     helperJugador = 1;
-                    //helperTiro = tiroIA.nextInt(3);
-                    helperTiro = 2;
+                    helperTiro = tiroIA.nextInt(3);
 
                     if (helperTiro == 0) {
                       puntosJugador += 1;
@@ -142,6 +142,8 @@ class _JuegoViewState extends State<JuegoView> {
                           ],
                         ),
                       );
+                      puntosIA = 0;
+                      puntosJugador = 0;
                     }
 
                     if (puntosJugador == 10) {
@@ -177,8 +179,7 @@ class _JuegoViewState extends State<JuegoView> {
                 onPressed: () {
                   setState(() {
                     helperJugador = 2;
-                    //helperTiro = tiroIA.nextInt(3);
-                    helperTiro = 0;
+                    helperTiro = tiroIA.nextInt(3);
 
                     if (helperTiro == 0) {
                       puntosIA += 1;
@@ -207,6 +208,8 @@ class _JuegoViewState extends State<JuegoView> {
                           ],
                         ),
                       );
+                      puntosIA = 0;
+                      puntosJugador = 0;
                     }
 
                     if (puntosJugador == 10) {
