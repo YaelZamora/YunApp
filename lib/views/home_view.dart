@@ -50,7 +50,7 @@ class _HomeViewState extends State<HomeView> {
                 prediccion = opcion[numero].opcion;
               });
             },
-            child: const Text('Te díre algo hermoso'),
+            child: const Text('Te díré algo hermoso'),
           ),
           const SizedBox(height: 100),
           FilledButton(
