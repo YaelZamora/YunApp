@@ -27,42 +27,44 @@ class _HomeViewState extends State<HomeView> {
         title: const Text('Mi amor'),
         backgroundColor: Colors.green,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            width: size.width,
-          ),
-          Lottie.asset('assets/love.json'),
-          Text(
-            opcion[numero].opcion,
-            style: GoogleFonts.dancingScript(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: size.width,
             ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 100),
-          FilledButton(
-            onPressed: () {
-              setState(() {
-                numero = aleatorio.nextInt(19) + 1;
-                prediccion = opcion[numero].opcion;
-              });
-            },
-            child: const Text('Te díré algo hermoso'),
-          ),
-          const SizedBox(height: 100),
-          FilledButton(
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => const JuegoView(),
+            Lottie.asset('assets/love.json'),
+            Text(
+              opcion[numero].opcion,
+              style: GoogleFonts.dancingScript(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.center,
             ),
-            child: const Text('Juguemos!!'),
-          ),
-        ],
+            const SizedBox(height: 100),
+            FilledButton(
+              onPressed: () {
+                setState(() {
+                  numero = aleatorio.nextInt(19) + 1;
+                  prediccion = opcion[numero].opcion;
+                });
+              },
+              child: const Text('Te díré algo hermoso'),
+            ),
+            const SizedBox(height: 100),
+            FilledButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const JuegoView(),
+                ),
+              ),
+              child: const Text('Juguemos!!'),
+            ),
+          ],
+        ),
       ),
     );
   }
