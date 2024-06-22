@@ -5,7 +5,7 @@ class _opciones {
 }
 
 final opcion = <_opciones>[
-  _opciones('Feliz cumpleaños amor de mi vida!!!!'),
+  //_opciones('Feliz cumpleaños amor de mi vida!!!!'),
   _opciones('Te amo más que a nada en el universo'),
   _opciones('Te amo con todo mi corazón'),
   _opciones('Te amo mi chaparrita preciosa'),

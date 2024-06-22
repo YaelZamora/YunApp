@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:yun_app/opciones.dart';
+import 'package:yun_app/views/gallery_view.dart';
 import 'package:yun_app/views/juego_view.dart';
 
 class HomeView extends StatefulWidget {
@@ -62,6 +63,16 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               child: const Text('Juguemos!!'),
+            ),
+
+            FilledButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const GalleryView(),
+                ),
+              ),
+              child: const Text('Mi amor por ti'),
             ),
           ],
         ),
